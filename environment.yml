@@ -1,0 +1,17 @@
+# conda env create --file environment.yml
+name: stable-fast-3d
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip=23
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pip:
+      - setuptools==69.5.1
+      - wheel
+      - -r requirements.txt
+      - -r requirements-demo.txt

@@ -3,7 +3,7 @@ import logging
 import os
 import sys
 
-import comfy.model_management
+# import comfy.model_management
 import folder_paths
 import numpy as np
 import torch
@@ -30,13 +30,13 @@ class StableFast3DLoader:
         return {"required": {}}
 
     def load(self):
-        device = comfy.model_management.get_torch_device()
+        # device = comfy.model_management.get_torch_device()
         model = SF3D.from_pretrained(
             SF3D_MODEL_NAME,
             config_name="config.yaml",
             weight_name="model.safetensors",
         )
-        model.to(device)
+        # model.to(device)
         model.eval()
 
         return (model,)

@@ -81,6 +81,9 @@ def get_extensions():
         extra_compile_args.update({"cxx": ["-O3", "-arch", "arm64"]})
         extra_link_args += ["-arch", "arm64"]
 
+    # Or do `export LDFLAGS=-L/opt/homebrew/Caskroom/miniconda/base/envs/stable-fast-3d/lib`
+    extra_link_args += ["-L/opt/homebrew/Caskroom/miniconda/base/envs/stable-fast-3d/lib"]
+
     extensions.append(
         extension(
             name=f"{library_name}._C",
