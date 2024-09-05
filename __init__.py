@@ -4,7 +4,7 @@ import os
 import sys
 
 # import comfy.model_management
-import folder_paths
+# import folder_paths
 import numpy as np
 import torch
 import trimesh
